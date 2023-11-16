@@ -1,20 +1,18 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import {NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: 'Home', href: '/Home', current: true },
-  { name: 'About Us', href: '/AboutUs', current: false },
-  { name: 'Test', href: '/Tests', current: false },
-  { name: 'Jobs', href: '/Jobs', current: false },
-
-]
+  { name: "Home", href: "/Home", current: true },
+  { name: "About Us", href: "/AboutUs", current: false },
+  { name: "Test", href: "/Tests", current: false },
+  { name: "Jobs", href: "/Jobs", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Header(props) {
@@ -38,11 +36,9 @@ export default function Header(props) {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <div className = " ">
-                    <h1 class ="text-2xl font-extrabold">TRIAL</h1>
-                  
+                  <div className=" ">
+                    <h1 class="text-2xl font-extrabold">TRIAL</h1>
                   </div>
-                  
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -50,12 +46,13 @@ export default function Header(props) {
                       <NavLink
                         key={item.name}
                         to={item.href}
-    
-                        className ={(isActive)=>{
-                          return 'rounded-md px-3 py-2 text-sm font-medium' +
-                          (isActive ? ' text-black-300 hover:bg-gray-700 hover:text-white'
-                          :'text-black-300 hover:bg-gray-700 hover:text-white')
-
+                        className={(isActive) => {
+                          return (
+                            "rounded-md px-3 py-2 text-sm font-medium" +
+                            (isActive
+                              ? " text-black-300 hover:bg-gray-700 hover:text-white"
+                              : "text-black-300 hover:bg-gray-700 hover:text-white")
+                          );
                         }}
                         // aria-current={item.current ? 'page' : undefined}
                       >
@@ -66,15 +63,22 @@ export default function Header(props) {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <NavLink
-    to="/Login"
-    className="font-extrabold mr-10 text-black-300 hover:bg-gray-700 hover:text-white"
-  >
-    Login
-  </NavLink>
+                <NavLink
+                  to="/Login"
+                  className="font-extrabold mr-10 text-black-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Login
+                </NavLink>
+                <NavLink
+                  to="/Register"
+                  className="font-extrabold mr-10 text-black-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Get Started
+                </NavLink>
+
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                {/* <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
@@ -128,7 +132,7 @@ export default function Header(props) {
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu> */}
               </div>
             </div>
           </div>
@@ -141,10 +145,12 @@ export default function Header(props) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -155,7 +161,5 @@ export default function Header(props) {
         </>
       )}
     </Disclosure>
-    
-  )
-  
+  );
 }

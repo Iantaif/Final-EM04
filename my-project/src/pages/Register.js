@@ -13,13 +13,31 @@ export default function Login() {
         </div>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-slate-50 rounded-2xl	">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h6>WELCOME BACK</h6>
+            <h6>LET'S GET YOU STARTED</h6>
             <h2 className="mt-3  text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Login to your account
+              Create an Account
             </h2>
           </div>
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form className="space-y-6" action="#" method="POST">
+            <div>
+                <label
+                  htmlFor="yourName"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Your Name
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="yourName"
+                    name="yourName"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
               <div>
                 <label
                   htmlFor="email"
@@ -60,30 +78,7 @@ export default function Login() {
                 </div>
               </div>
 
-              <div>
-                <div className="text-sm flex justify-between">
-                  <div class="flex items-center mb-4">
-                    <input
-                      id="default-checkbox"
-                      type="checkbox"
-                      value=""
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label
-                      for="default-checkbox"
-                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Remember me
-                    </label>
-                     
-                  </div>
-                  <div class="">
-                    <a href="#" className=" font-normal	 hover:text-indigo-500">
-                      Forgot password?
-                    </a>
-                  </div>
-                </div>
-              </div>
+              
 
               <div>
                 <button
