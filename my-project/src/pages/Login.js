@@ -2,12 +2,33 @@ import image30 from "../images/image30.png";
 import icongoogle from "../icons/icon1.png";
 import iconface from "../icons/facebook.png";
 import iconapp from "../icons/apple.png";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevents the form from submitting and page reload
+
+    if (!email || !password) {
+      setError('Please enter both email and password.');
+      return;
+    }
+
+    // Perform authentication logic here (e.g., make API request to your server)
+    // If successful, navigate to the dashboard or update the UI accordingly
+    // If failed, update the error state
+
+    console.log('Login successful!');
+  };
   return (
     <>
-      <div class="flex bg-white w-1/2 sm:mx-auto ml-10 ">
+      <div class="flex bg-white w-1/2 sm:mx-auto ml-10  pt-12">
         <div class="flex items-center ">
           <img src={image30} alt="Example" class="hidden lg:block" />
         </div>
@@ -34,6 +55,8 @@ export default function Login() {
                     type="email"
                     autoComplete="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -55,6 +78,8 @@ export default function Login() {
                     type="password"
                     autoComplete="current-password"
                     required
+                    onChange={(e) => setPassword(e.target.value)}
+
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -64,13 +89,15 @@ export default function Login() {
                 <div className="text-sm flex justify-between">
                   <div class="flex items-center mb-4">
                     <input
-                      id="default-checkbox"
+                      id="rememberMe"
                       type="checkbox"
                       value=""
+                      checked={rememberMe}
+                    onChange={() => setRememberMe(!rememberMe)}
                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
                     <label
-                      for="default-checkbox"
+                      for="rememberMe"
                       class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >
                       Remember me
@@ -122,12 +149,12 @@ export default function Login() {
             <div>
               <p className="mt-10 text-center text-sm text-gray-500">
                 New User?{" "}
-                <a
-                  href="#"
-                  className="font-semibold text-black w-full  leading-6 hover:text-indigo-500 underline underline-offset-4"
-                >
-                  Sign Up Here
-                </a>
+                <Link
+      to="/register"  // Đặt đường dẫn bạn muốn chuyển hướng tới
+      className="font-semibold text-black w-full  leading-6 hover:text-indigo-500 underline underline-offset-4"
+    >
+      Log In Here
+    </Link>
               </p>
             </div>
           </div>
