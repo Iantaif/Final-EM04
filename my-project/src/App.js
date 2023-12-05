@@ -10,6 +10,11 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Quiz from './pages/Quiz';
 import Result from './pages/Result';
+import Intro from './pages/Intro';
+import Intro1 from './pages/Intro1';
+import Footer from './components/Footer';
+
+
 
 
 
@@ -27,8 +32,12 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/intro" element={<Intro />} />
+        <Route path="/intro1" element={<Intro1 />} />
+
 
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -7,8 +7,8 @@ import abouts3 from '../images/abouts3.png';
 
 const AboutUs = () => {
   return (
-    <div class="root flex ">
-    <div class='flex items-center justify-center border-solid border-2 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl mt-10	'>
+    <div class=" flex flex-col justify-center items-center gap-10	">
+    <div class='flex items-center justify-center border-solid border-1 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl mt-10 	'>
     <div class="image54" style={{ backgroundImage: `url(${iamge54})` }}></div>
     <div class="frame20 flex ">
       <div class="frame18 ml-8">
@@ -27,7 +27,7 @@ const AboutUs = () => {
     </div>
     </div>
 
-    <div class='flex items-center justify-center border-solid border-2 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
+    <div class='flex items-center justify-center border-solid border-1 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
     <div class="image54" style={{ backgroundImage: `url(${abouts2})` }}></div>
     <div class="frame20 flex ">
       <div class="frame18 ml-8">
@@ -45,7 +45,7 @@ const AboutUs = () => {
       </div>
     </div>
     </div>
-    <div class='flex items-center justify-center border-solid border-2 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
+    <div class='flex items-center justify-center border-solid border-1 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
     <div class="image54" style={{ backgroundImage: `url(${abouts3})` }}></div>
     <div class="frame20 flex ">
       <div class="frame18 ml-8">
@@ -63,7 +63,7 @@ const AboutUs = () => {
       </div>
     </div>
     </div>
-    <div class='flex items-center justify-center border-solid border-2 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
+    <div class='flex items-center justify-center border-solid border-1 rounded-2xl drop-shadow-2xl p-5 bg-white	max-w-4xl	'>
     <div class="image54" style={{ backgroundImage: `url(${abouts3})` }}></div>
     <div class="frame20 flex ">
       <div class="frame18 ml-8">
