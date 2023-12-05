@@ -8,6 +8,10 @@ import Tests from './pages/Tests';
 import Jobs from './pages/Jobs';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Quiz from './pages/Quiz';
+import Result from './pages/Result';
+
+
 
 
 function App() {
@@ -21,6 +25,9 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/result" element={<Result />} />
+
       </Routes>
     </Router>
   );

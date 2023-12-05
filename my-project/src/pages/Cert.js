@@ -10,7 +10,7 @@ const Job: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="rounded-sm bg-white  flex flex-row items-start justify-center p-10 box-border mt-20 ">
+    <div className="rounded-sm bg-white  flex flex-row items-start justify-center p-10 box-border ">
       <div className="rounded-sm bg-white shadow-[0px_22.898128509521484px_45.8px_-11.45px_rgba(52,_41,_39,_0.08)] w-[885px] flex flex-col items-center justify-start p-10 box-border gap-[20px]">
         <div className=" flex flex-col items-center justify-between font-black text-primaty-cyan-dark text-3xl	">
           <div className="flex flex-row items-center justify-center gap-[10px]">
