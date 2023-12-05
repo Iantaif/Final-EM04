@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   return (
-    <div class=" flex justify-center  sm:mx-auto item items-center">
+    <div class=" flex justify-center  sm:mx-auto item items-center pb-32">
       <div class ="justify-center">
         <h1 class="font-bold text-7xl	">Try your dream <br /> jobs</h1>
       </div>
