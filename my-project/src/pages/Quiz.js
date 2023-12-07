@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../css/Quiz.css'
 
 
+
 const questions = [
     {
         id: 1,
@@ -80,7 +81,7 @@ function App() {
         setSelectedOption('');
       } else {
         setResult(`${result} - Hoàn thành!`);
-        window.location.href = '/Result';
+        window.location.href = '/afterquiz';
       }
     } else {
       alert('Vui lòng chọn một trong 5 lựa chọn.');
