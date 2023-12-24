@@ -21,18 +21,7 @@ import Finshroute from './pages/Finishroutes';
 import Cert from './pages/Cert';
 import Job from './pages/Job';
 import Favorite from './pages/Favorite';
-
-
-
-
-
-
-
-
-
-
-
-
+import Carrer from './pages/Carrer';
 function App() {
   return (
     <Router>
@@ -56,12 +45,7 @@ function App() {
         <Route path="/cert" element={<Cert />} />
         <Route path="/job" element={<Job />} />
         <Route path="/favorite" element={<Favorite />} />
-
-
-
-
-
-
+        <Route path="/Carrer" element={<Carrer />} />
 
       </Routes>
       <Footer />
