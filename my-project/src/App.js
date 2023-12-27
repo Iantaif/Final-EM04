@@ -22,6 +22,7 @@ import Cert from './pages/Cert';
 import Job from './pages/Job';
 import Favorite from './pages/Favorite';
 import Carrer from './pages/Carrer';
+import FormUser from './pages/FormUser';
 function App() {
   return (
     <Router>
@@ -46,6 +47,8 @@ function App() {
         <Route path="/job" element={<Job />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/Carrer" element={<Carrer />} />
+        <Route path="/FormUser" element={<FormUser />} />
+
 
       </Routes>
       <Footer />
